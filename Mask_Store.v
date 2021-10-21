@@ -28,7 +28,6 @@ module MaskStore(MemAdr, MemData, RegData , Bytes2Store, Clk, out);
     output reg out;
     wire [31:0] Out_sh, Out_sh;
     StoreByte sb(MemAdr, MemData, RegData, Clk, Out_sb);
-   
     StoreHalf sh(MemAdr[1], MemData, RegData, Clk, Out_sh);
     always @(*)  begin
         case (Bytes2Store) 
